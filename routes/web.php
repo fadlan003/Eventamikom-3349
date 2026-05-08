@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\Admin\EventController as EventAdminController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -48,4 +49,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     
     // Laporan Transaksi
     Route::get('/transactions', [DashboardController::class, 'transactions'])->name('transactions.index');
+});
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('events', EventAdminController::class);
 });
