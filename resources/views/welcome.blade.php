@@ -33,7 +33,7 @@
             class="absolute -bottom-10 -right-10 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000">
         </div>
         <img src="assets/concert.png" alt="Concert"
-            class="rounded-[2rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/5] object-center">
+            class="rounded-4xl shadow-2xl relative z-10 w-full object-cover aspect-4/5 object-center">
 
         <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl z-20 border border-white">
             <div class="flex items-center gap-4">
@@ -68,7 +68,7 @@
         <!-- Event Card 1 -->
         <div
             class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
-            <div class="relative overflow-hidden aspect-[3/4]">
+            <div class="relative overflow-hidden aspect-3/4">
                 <img src="assets/concert.png" alt="Jazz Night"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 <div
@@ -98,7 +98,7 @@
         <!-- Event Card 2 -->
         <div
             class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
-            <div class="relative overflow-hidden aspect-[3/4]">
+            <div class="relative overflow-hidden aspect-3/4">
                 <img src="assets/workshop.png" alt="AI & Future"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 <div
@@ -127,7 +127,7 @@
         <!-- Event Card 3 -->
         <div
             class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
-            <div class="relative overflow-hidden aspect-[3/4]">
+            <div class="relative overflow-hidden aspect-3/4">
                 <img src="assets/hackathon.png" alt="Hackathon 2024"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 <div
@@ -152,6 +152,27 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Partner List -->
+<section class="max-w-7xl mx-auto px-6 py-20 bg-slate-50 rounded-[3rem] border border-slate-100">
+    <div class="flex items-center justify-between mb-10">
+        <div>
+            <h2 class="text-3xl font-extrabold">Partner AmikomEventHub</h2>
+            <p class="text-slate-500">Platform ini didukung oleh partner yang terpercaya.</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        @foreach($partners as $partner)
+            <div class="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-lg transition">
+                <img src="{{ asset('storage/'.$partner->logo_path) }}" alt="{{ $partner->name }}" class="max-h-20 object-contain">
+                <a href="{{ $partner->website_url }}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold hover:underline">{{ $partner->name }}</a>
+            </div>
+        @endforeach
+        @if($partners->isEmpty())
+            <div class="col-span-full text-center text-slate-500 py-10 bg-white rounded-3xl border border-slate-200">Partner belum tersedia.</div>
+        @endif
     </div>
 </section>
 @endsection

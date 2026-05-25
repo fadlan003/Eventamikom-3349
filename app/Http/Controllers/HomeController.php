@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //method index
     public function index()
     {
-        return view('welcome');
+        $partners = Partner::latest()->get();
+
+        return view('welcome', compact('partners'));
     }
 }
