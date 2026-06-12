@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 @section('content')
 
 <main class="max-w-3xl mx-auto px-6 py-20">
@@ -150,4 +150,4 @@
         animation: bounce-in 0.4s ease-out forwards;
     }
 </style>
-@endsection
+@endsection -->
