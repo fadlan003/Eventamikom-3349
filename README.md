@@ -9,6 +9,7 @@ Tugas 2 <br/>
 4. Halaman Beranda : https://eventamikom-3349-main-wclbq5.free.laravel.cloud/
 5. Halaman Detail Event : https://eventamikom-3349-main-wclbq5.free.laravel.cloud/event-detail.html
 6. Halaman Checkout : https://eventamikom-3349-main-wclbq5.free.laravel.cloud/checkout.html
-
+7. 
 Tugas 3 : menambahkan database migration/seeding <br/>
 Tugas 4 : CRUD tabel event 
+
