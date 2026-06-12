@@ -11,6 +11,5 @@ Tugas 2 <br/>
 6. Halaman Checkout : https://eventamikom-3349-main-wclbq5.free.laravel.cloud/checkout.html
    
 Tugas 3 : menambahkan database migration/seeding <br/>
-Tugas 4 : CRUD tabel event 
-Tugas 8 : authentication (login dan register admin)
+Tugas 4 : CRUD tabel event
 
