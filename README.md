@@ -13,6 +13,7 @@ Tugas 2 <br/>
 Tugas 3 : menambahkan database migration/seeding <br/>
 Tugas 4 : CRUD tabel event <br/>
 Tugas 8 : authentication (login & register admin) <br/>
-Tugas 10 : menampilkan front end event, detail event, dan coba checkout,serta menu navigasi transaksi pada admin
+Tugas 10 : menampilkan front end event, detail event, dan coba checkout, serta menu navigasi transaksi pada admin <br/>
+Tugas 11 : integrasi midtrans
 
 

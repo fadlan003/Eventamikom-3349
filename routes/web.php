@@ -23,6 +23,8 @@ Route::get('/checkout/{event}', [CheckoutController::class, 'create'])
 
 Route::post('/checkout/{event}', [CheckoutController::class, 'store'])
     ->name('checkout.store');
+Route::get('/payment/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'payment'])->name('checkout.payment');
+Route::get('/success/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
 
 // Route checkout lama (tetap dipertahankan)
 Route::get('/checkout', [EventController::class, 'checkout'])
